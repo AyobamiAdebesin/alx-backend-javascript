@@ -1,7 +1,5 @@
-export default function createEmployeesObject(departmentName, employees){
-    
-    var employeeDatabaseObject = {
-        [`${departmentName}`]: employees
-    };
-    return employeeDatabaseObject;
+export default function createEmployeesObject(departmentName, employees) {
+  return {
+    [`${departmentName}`]: employees,
+  };
 }
