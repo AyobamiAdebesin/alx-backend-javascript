@@ -32,11 +32,11 @@ export default class HolbertonCourse {
     return this._length;
   }
 
-  set length(zise) {
-    if (typeof zise !== 'number') {
+  set length(le) {
+    if (typeof le !== 'number') {
       throw new TypeError('Length must be a number');
     }
-    this._length = zise;
+    this._length = le;
   }
 
   get students() {
