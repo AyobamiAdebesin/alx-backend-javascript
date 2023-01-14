@@ -1,6 +1,6 @@
 export default function groceriesList() {
   const grocMap = new Map();
-  grocMap.set('Apple', 10);
+  grocMap.set('Apples', 10);
   grocMap.set('Tomatoes', 10);
   grocMap.set('Pasta', 1);
   grocMap.set('Rice', 1);
