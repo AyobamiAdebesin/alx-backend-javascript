@@ -6,10 +6,8 @@ export default function cleanSet(setObj, startString) {
   if (typeof (startString) !== 'string') {
     return '';
   }
-  for (const x of setObj) {
-    if (x.startsWith(startString)) {
-      outString += `${x.split(startString)[1]}-`;
-    }
-  }
-  return outString.slice(0, outString.length - 1);
-}
+  return [...set]
+    .filter((parametro) => (parametro !== undefined ? parametro.startsWith(startString) : ''))
+    .map((parametro) => (parametro !== undefined ? parametro.slice(startString.length) : ''))
+    .join('-');
+};
