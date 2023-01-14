@@ -8,5 +8,5 @@ export default function cleanSet(setObj, startString) {
       outString += `${x.split(startString)[1]}-`;
     }
   }
-  return outString;
+  return outString.slice(0, outString.length-1);
 }
