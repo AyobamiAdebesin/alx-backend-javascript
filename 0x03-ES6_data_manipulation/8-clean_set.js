@@ -1,6 +1,6 @@
 export default function cleanSet(setObj, startString) {
   let outString = '';
-  if (startString === undefined || startString.length === 0 || typeof(startString) !== 'string') {
+  if (startString === undefined || startString.length === 0) {
     return '';
   }
   for (const x of setObj) {
