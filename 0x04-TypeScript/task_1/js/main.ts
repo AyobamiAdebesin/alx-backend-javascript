@@ -4,9 +4,16 @@ interface Teacher {
     fullTimeEmployee : boolean,
     yearsOfExperience? : number,
     location : string,
-    [propName: string]: any,
+    [attrName: string]: any,
 }
 
 interface Directors extends Teacher{
     numberOfReports : number,
+}
+
+interface printTeacherFunction{
+    (firstName: string, lastName: string) : string;
+}
+const printTeacher: printTeacherFunction = (firstName : string, lastName: string) : string => {
+    return `${firstName.charAt(0)}.${lastName}`;
 }
