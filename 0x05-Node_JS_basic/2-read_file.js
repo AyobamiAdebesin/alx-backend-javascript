@@ -2,17 +2,18 @@ const fs = require('fs');
 
 /**
  * Count and return the number of students in a CSV file
- * @param {String} path - The path to the CSV file
+ * @param {String} datapath - The path to the CSV file
  */
 
-function countStudents(path) {
-  if (!fs.existsSync(path)) {
-    throw new Error('Cannot load database');
+const countStudents = (dataPath) => {
+  if (!fs.existsSync(dataPath)) {
+    throw new Error('Cannot load the database');
   }
-  if (!fs.statSync(path).isFile()) {
-    throw new Error('Cannot load database');
+  if (!fs.statSync(dataPath).isFile()) {
+    throw new Error('Cannot load the database');
   }
-  const fileLines = fs.readFileSync(path, 'utf-8')
+  const fileLines = fs
+    .readFileSync(dataPath, 'utf-8')
     .toString('utf-8')
     .trim()
     .split('\n');
@@ -40,6 +41,6 @@ function countStudents(path) {
     const studentNames = group.map((student) => student.firstname).join(', ');
     console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
   }
-}
+};
 
 module.exports = countStudents;
