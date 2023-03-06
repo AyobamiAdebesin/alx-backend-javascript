@@ -1,4 +1,4 @@
-// A function that prints to STDOUT
+#!/usr/bin/node
 export default function displayMessage(message) {
   console.log(message);
 }
