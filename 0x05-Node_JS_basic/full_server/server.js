@@ -1,5 +1,5 @@
 const express = require('express');
-const { router } = require('../6-http_express');
+const router = require('./routes/index');
 
 const app = express();
 const port = 1245;
